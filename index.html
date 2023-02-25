@@ -1,34 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css.css">
-  <title>Document</title>
-
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> MY APP</title>
+    <link rel="stylesheet" href="css/a.css"">
 </head>
 <body>
-  <div class="container">  
-  <button onclick="window.location.href = 'About.html';">
-    PRESS ME!
-  </button>
+ <div id="text-typer"><h1  welcome</h1>
+  </div>
+
+    <input id="switch" type="checkbox">
+<div class="app">
+  <div class="body">
+    
+    <div class="phone">
+    
+      <div class="menu">
+        <div class="time">4:20</div>
+        <div class="icons">
+          <div class="network"></div>
+          <div class="battery"></div>
+        </div>
+      </div>
+    
+      <div class="content">
+        <div class="circle">
+          <div class="crescent"></div>
+        </div>
+       
+        <label for="switch">
+          <div class="toggle"></div>
+          <div class="names">
+            <p class="light">Light</p>
+            <p class="dark">Dark</p>
+          </div>
+        </label>
+      </div>
+    </div>
+  </div>
+  
+</div>
+    
 </body>
-<label for="theme" class="theme">
-	<span class="theme__toggle-wrap">
-		<input id="theme" class="theme__toggle" type="checkbox" role="switch" name="theme" value="dark">
-		<span class="theme__fill"></span>
-		<span class="theme__icon">
-			<span class="theme__icon-part"></span>
-			<span class="theme__icon-part"></span>
-			<span class="theme__icon-part"></span>
-			<span class="theme__icon-part"></span>
-			<span class="theme__icon-part"></span>
-			<span class="theme__icon-part"></span>
-			<span class="theme__icon-part"></span>
-			<span class="theme__icon-part"></span>
-			<span class="theme__icon-part"></span>
-		</span>
-	</span>
-</label>
+<script> 
+const textTyper = document.getElementById("text-typer");
+
+const text = "Welcome";
+let index = 0;
+
+function typeText() {
+  textTyper.innerHTML += text[index];
+  index++;
+  
+  if (index >= text.length) {
+    clearInterval(intervalId);
+  }
+}
+
+const intervalId = setInterval(typeText, 100);
+
+
+
+</script>
 </html>
